@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Artyom Kuzkov <mc.ky3r@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "lerna run start:dev --parallel --scope=@app/ms-*",
+    "build": "lerna run build"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
