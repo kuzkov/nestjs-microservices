@@ -8,6 +8,7 @@ const logger = new Logger("Microservice");
 const microserviceOptions: MicroserviceOptions = {
   transport: Transport.TCP,
   options: {
+    host: 'microservice',
     port: 8080,
   }
 };
