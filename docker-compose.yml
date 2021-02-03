@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  microservice: 
+    build: ./apps/microservice
+    ports:
+      - 8080:8080
+    container_name: mic
+  gateway: 
+    build: ./apps/gateway
+    ports:
+      - 3000:3000
+    container_name: gat
