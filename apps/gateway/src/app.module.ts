@@ -8,7 +8,8 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
     name: 'MICROSERVICE',
     transport: Transport.TCP,
     options: {
-      port: 8081,
+      host: 'microservice',
+      port: 8080,
     },
   }])],
   controllers: [AppController],
