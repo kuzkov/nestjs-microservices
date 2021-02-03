@@ -3,6 +3,7 @@ import { MessagePattern } from '@nestjs/microservices';
 
 @Controller()
 export class AppController {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   @MessagePattern('hello')
