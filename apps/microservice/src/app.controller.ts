@@ -7,6 +7,6 @@ export class AppController {
 
   @MessagePattern('hello')
   getHello(name: string): string {
-    return `Hello, ${name}`;
+    return `Hi, ${name}`;
   }
 }

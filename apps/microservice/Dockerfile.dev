@@ -1,0 +1,7 @@
+FROM node:15.8.0-alpine3.10
+
+MAINTAINER Artyom Kuzkov <artyom.kuzkov@yandex.ru>
+
+WORKDIR /nestjs-microservices/apps/microservice
+
+CMD ["npm", "run", "start:dev"]
