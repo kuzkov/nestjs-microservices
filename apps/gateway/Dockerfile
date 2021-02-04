@@ -1,13 +1,15 @@
-FROM node:15.7.0-alpine3.10
+FROM node:12.10-slim
 
 MAINTAINER Artyom Kuzkov <artyom.kuzkov@yandex.ru>
 
-WORKDIR /nestjs-microservices/apps/app
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+RUN npm run build
 
 EXPOSE 3000
 
-COPY ./dist .
-COPY ./package.json ./package.json
-
-RUN npm i --production
-CMD ["node", "main.js"]
+CMD ["npm", "run", "start:prod"]
