@@ -6,7 +6,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "lerna run start:dev --parallel --scope=@app/ms-*",
     "build": "lerna run build"
   },
   "workspaces": [
