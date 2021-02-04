@@ -1,15 +1,12 @@
-FROM node:12.10-slim
+FROM node:15.8.0-alpine3.10
 
 MAINTAINER Artyom Kuzkov <artyom.kuzkov@yandex.ru>
 
 WORKDIR /app
 
-COPY . .
+COPY ./dist .
+COPY ./package.json ./package.json
 
-RUN npm install
+RUN npm install --production
 
-RUN npm run build
-
-EXPOSE 3000
-
-CMD ["npm", "run", "start:prod"]
+CMD ["node", "main.js"]
